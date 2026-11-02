@@ -1,0 +1,32 @@
+{
+  "name": "hongxuan-astro",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "setup": "node scripts/setup-local.mjs",
+    "dev": "astro dev --host 127.0.0.1",
+    "build": "astro build",
+    "check": "astro check",
+    "preview": "astro preview --host 127.0.0.1",
+    "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "db:local": "wrangler d1 migrations apply hongxuan --local",
+    "types": "wrangler types",
+    "deploy:check": "wrangler deploy --dry-run",
+    "deploy": "wrangler deploy"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^14.4.3",
+    "astro": "^7.4.4"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.12",
+    "@types/node": "^26.6.6",
+    "typescript": "^6.0.3",
+    "wrangler": "^4.156.1"
+  },
+  "allowScripts": {
+    "workerd@1.20261101.1": true,
+    "esbuild@0.28.2": true
+  }
+}

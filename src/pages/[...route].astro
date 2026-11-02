@@ -1,0 +1,48 @@
+---
+import { env } from 'cloudflare:workers';
+import { createContext, handleCore } from '../server/core';
+import { renderPublic } from '../server/public';
+import { renderAdmin } from '../server/admin';
+import PublicLayout from '../layouts/PublicLayout.astro';
+import AdminLayout from '../layouts/AdminLayout.astro';
+import type { PageResult } from '../server/contracts';
+import assetAliases from '../server/asset-aliases.json';
+
+const pathname = Astro.url.pathname;
+if (/^\/(?:db|include|\.local|test|aspnet_client)(?:\/|$)/i.test(pathname) || /(?:^|\/)_(?:vti_cnf|vti_pvt)(?:\/|$)/i.test(pathname) || /\.(?:mdb|inc|config|ini|asp[x]?)$/i.test(pathname) && /(?:NieLq77|ZmaPiga|web\.config)/i.test(pathname)) {
+  return new Response('Not found', { status: 404 });
+}
+if (pathname.toLowerCase().startsWith('/app/data/')) {
+  const key = decodeURIComponent(pathname).slice(1);
+  const object = await env.UPLOADS.get(key);
+  if (object) {
+    const headers = new Headers();
+    object.writeHttpMetadata(headers);
+    headers.set('etag', object.httpEtag);
+    headers.set('x-content-type-options', 'nosniff');
+    return new Response(Astro.request.method === 'HEAD' ? null : object.body, { headers });
+  }
+  const alias = (assetAliases as Record<string, string>)[key];
+  if (alias) return env.ASSETS.fetch(new Request(new URL(alias, Astro.url), Astro.request));
+  return env.ASSETS.fetch(Astro.request);
+}
+const ctx = await createContext({ request: Astro.request, url: Astro.url, cookies: Astro.cookies, env });
+// Classic Request() looked in the query string and then the submitted form.
+// createContext also restores session-private drafts after failed submissions.
+// Keep those values; query-string values retain the original Request() precedence.
+const submittedNames = new Set<string>();
+for (const [key, value] of ctx.form.entries()) {
+  if (typeof value === 'string' && !Astro.url.searchParams.has(key)) {
+    if (!submittedNames.has(key)) ctx.params.delete(key);
+    ctx.params.append(key, value);
+    submittedNames.add(key);
+  }
+}
+const result = await handleCore(ctx) ?? await renderAdmin(ctx) ?? await renderPublic(ctx);
+if (result instanceof Response) return result;
+const page: PageResult = result ?? { title: 'Page not found', html: '<h1>Page not found</h1>', kind: 'standalone', status: 404 };
+Astro.response.status = page.status ?? 200;
+Astro.response.headers.set('X-Content-Type-Options', 'nosniff');
+if (ctx.path.startsWith('/app/') || /cart|contactus/.test(ctx.path)) Astro.response.headers.set('Cache-Control', 'no-store');
+---
+{page.kind === 'public' ? <PublicLayout page={page} ctx={ctx} /> : page.kind === 'admin' ? <AdminLayout page={page} ctx={ctx} /> : <Fragment set:html={page.html} />}

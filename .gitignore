@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.astro/
+.wrangler/
+.dev.vars
+private-data/
+validation/private/
+*.log
+.local/
+.playwright-cli/

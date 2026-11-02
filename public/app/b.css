@@ -1,0 +1,67 @@
+.smallnote   { font-size: 8pt; font-family: Arial, Verdana; color: #000000}
+.smallnote1   { font-size: 8pt; font-family: Arial, Verdana; color: #000000}
+.bold        { font-family: Arial; font-size: 14pt }
+.show        { font-size: 12px; font-family: Arial, Verdana; text-align: Justify ; color: #000000}
+.label       { font-size: 10pt; font-family: Arial, Verdana; font-weight: bold}
+.menuitem {
+	FONT-SIZE: 8pt;
+    FONT-FAMILY: Arial, Verdana;
+    font-weight: 
+}
+
+.h5 {
+	FONT-SIZE: 8pt;
+    FONT-FAMILY: Arial, Verdana;
+    font-weight: 
+}
+
+.h4          { font-size: 10pt; font-family: Arial, Verdana; text-align: Justify }
+.h4_1        { font-family: Arial; font-size: 10pt; color: #FFFFFF; text-align: Justify }
+.h3 {
+	FONT-SIZE: 11pt;
+    FONT-FAMILY: Arial, Verdana;
+    font-weight: 
+}
+
+.h2 {
+	FONT-SIZE: 12pt;
+    FONT-FAMILY: Arial, Verdana;
+    font-weight: 
+}
+
+.h1 {
+	FONT-SIZE: 14pt;
+    FONT-FAMILY: Arial, Verdana;
+    font-weight: 
+}
+
+a.underlining:link { color: #0000FF; text-decoration: none }
+a.underlining:visited { color: #0000FF; text-decoration: none }
+a.underlining:hover { color: #FF0000; text-decoration: underline }
+A.underlining1:link {
+	COLOR: #FFFF00; 
+	TEXT-DECORATION: none;
+	font-weight : bold;
+}
+A.underlining1:visited {
+	COLOR: #FFFF00; 
+	TEXT-DECORATION: none;
+	font-weight : bold;
+}
+A.underlining1:hover {
+	COLOR: red;	 
+	TEXT-DECORATION: none;
+}
+
+.enquirybutton
+{
+	font-size: 0.5px; 
+	font-family: Arial, Verdana, Helvetica, Sans-serif; 
+	BORDER-BOTTOM: #000000 solid 0px; 
+	BORDER-LEFT: #000000 solid 0px; 
+	BORDER-RIGHT: #000000 solid 0px; 
+	BORDER-TOP: #000000 solid 0px; 
+	background-image:url(images/buttons/btn-submit.gif);
+	COLOR: #FFFFFF; 
+	width: 71px; height: 18px;
+}

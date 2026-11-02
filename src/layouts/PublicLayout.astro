@@ -1,0 +1,58 @@
+---
+import Header from '../components/Header.astro';
+import type { PageResult, RequestContext } from '../server/contracts';
+import { navigation, sidebar, categoryStrip, footer } from '../server/public';
+interface Props { page:PageResult; ctx:RequestContext }
+const {page,ctx}=Astro.props;
+const catalogue=['/our-products.asp','/new-arrival.asp','/our-brands.asp','/our-brands1.asp','/details.asp'].includes(ctx.path);
+const nav=await navigation(ctx);
+const right=await sidebar(ctx,catalogue);
+const categories=catalogue?await categoryStrip(ctx):'';
+---
+<Fragment set:html={'<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">'} />
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+{!['/','/index.asp'].includes(ctx.path) && <meta name="revisit-after" content="1 days" />}
+<title>{page.title}</title>
+<meta name="description" content={page.description||''} />
+<meta name="keywords" content={page.keywords||''} />
+<meta name="robots" content="index, follow" />
+<link rel="stylesheet" href="/a.css" />
+<style is:inline>
+body { margin:0; background-color:#ffff41; background-image:url('/images/bg_01.jpg'); background-repeat:repeat-x; background-position:top; }
+html,body { min-height:100%; }
+body>table { min-width:1002px; }
+
+</style>
+<script is:inline>
+function MM_swapImgRestore(){document.querySelectorAll('img[data-original]').forEach(function(i){i.src=i.dataset.original;});}
+function MM_swapImage(){for(var a=arguments,i=0;i<a.length-2;i+=3){var im=document.getElementsByName(a[i])[0];if(im){im.dataset.original=im.dataset.original||im.src;im.src=a[i+2];}}}
+function MM_openBrWindow(url,name,features){window.open(url,name,features);}
+
+document.addEventListener('submit',function(event){
+ var form=event.target;if(!(form instanceof HTMLFormElement))return;
+ if(form.name==='SearchForm'&&!form.elements.namedItem('keyword').value.trim()){event.preventDefault();alert('Please key in Keyword and try again.');form.elements.namedItem('keyword').focus();return;}
+ if(form.name!=='ClientForm'&&!(form.name==='CartForm'&&form.elements.namedItem('email')))return;
+ var contact=form.name==='ClientForm';
+ var required=contact?[['contactname','Name'],['contactno','Tel'],['email','Email'],['remarks','Enquire'],['strCAPTCHA','security code']]:[['contactname','Contact Name'],['email','Email'],['add','Address'],['contactno','Contact Number'],['strCAPTCHA','security code']];
+ for(var pair of required){var field=form.elements.namedItem(pair[0]);if(!field.value.trim()){event.preventDefault();alert('Please key in '+pair[1]+' and try again.');field.focus();return;}}
+ if(contact){for(var pair of [['contactno','Tel'],['faxno','Fax']]){var field=form.elements.namedItem(pair[0]);if(field.value&& !/^\d+$/.test(field.value)){event.preventDefault();alert("The value contained in '"+pair[1]+"' must be numeric!");field.focus();return;}}}
+ var email=form.elements.namedItem('email');if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)){event.preventDefault();alert('Invalid Email format.');email.focus();return;}
+ if(!confirm('Are You Sure ?'))event.preventDefault();
+});
+</script>
+</head>
+<body>
+<table width="1002" border="0" align="center" cellpadding="0" cellspacing="0" {...{height:"100%"}}>
+<tr {...{height:"191"}}><td valign="top"><Header /></td></tr>
+<tr {...{height:"39"}}><td valign="top" set:html={nav} /></tr>
+<tr {...{height:"100%"}}><td valign="top" {...{background:"/images/bg.jpg"}} style="background-repeat:no-repeat;background-position:top;background-color:#ffff41"><table width="1002" border="0" cellpadding="0" cellspacing="0" class="text">
+{categories&&<tr><td colspan="5" set:html={categories} /></tr>}
+<tr {...{valign:"top"}}><td {...{width:"54"}}><img src="/images/blank.gif" width="54" height="10" alt="" /></td><td {...{width:"620"}} set:html={page.html}/><td {...{width:"45"}}><img src="/images/blank.gif" width="45" height="10" alt="" /></td><td {...{width:"269"}} set:html={right}/><td {...{width:"14"}}><img src="/images/blank.gif" width="14" height="10" alt="" /></td></tr>
+</table></td></tr>
+<tr {...{height:"60"}}><td valign="top" set:html={footer}/></tr>
+</table>
+</body>
+</html>
