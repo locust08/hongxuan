@@ -2,6 +2,8 @@
 
 The Astro application runs locally at http://127.0.0.1:4321. Production output was also exercised with Astro's Workers preview at port4322. The original source remains outside this application, unchanged.
 
+**Deployment follow-up:** the application has since been pushed to GitHub and deployed on Cloudflare Workers. See [DEPLOYMENT.md](DEPLOYMENT.md) for the public URL, production D1 reconciliation and live verification. The evidence below records the earlier migration acceptance checks.
+
 ## Verified results
 
 | Check | Result |
@@ -41,6 +43,6 @@ Native Canvas retains the exported header artwork,546-frame timeline and origina
 - `video/video.wmv` is absent. `aboutus_old.asp` preserves its400x400 area with an accessible unavailable-media fallback; video playback is unavailable.
 - The native rich-text editor preserves formatting and HTML editing functionality, but its controls differ from the old TinyMCE toolbar. Advanced table/image-property dialogs and per-editor zoom are not reproduced; equivalent markup is editable through HTML source. Some admin form/table spacing differs. Captcha is session SVG. The obsolete Flash loading scene is skipped; the main animation is retained. Exact pixel parity for every animation frame and every admin record state is not claimed.
 - External mail delivery requires a configured provider, verified sender and token. Default mode safely retains messages in the outbox. Scheduling/retry behavior is locally tested; provider acceptance and final delivery remain unverified.
-- Cloudflare account resources, real D1 ID, production imports, secrets and domain routing still require provisioning. The deployment dry run passes; no live deployment or production behavior is claimed.
+- Cloudflare deployment was initially an external blocker; it is now provisioned and live as recorded in [DEPLOYMENT.md](DEPLOYMENT.md). Email provider configuration and any custom domain routing remain separate.
 
 The six intentionally excluded ASP candidates are legacy hosting diagnostics and malicious code-execution utilities, explicitly listed in the route ledger. They are not business pages. Private source/configuration/database files are not shipped as public assets.

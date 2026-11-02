@@ -1,5 +1,9 @@
 # Hong Xuan — Astro migration
 
+**Live website:** https://hongxuan-astro.easondev.workers.dev  
+**Admin:** https://hongxuan-astro.easondev.workers.dev/app/admin/login.asp  
+**Repository:** https://github.com/locust08/hongxuan
+
 The migrated application uses Astro 7.4.4, the Cloudflare adapter 14.4.3, TypeScript 6.0.3, Workers, D1 and R2. TypeScript 6 is used because the current Astro checker supports TypeScript 5/6. Package versions are locked in `package-lock.json`.
 
 The original website remains in the parent folder for comparison. **Running this application does not require IIS, Classic ASP, Microsoft Access, Java, FFDec, Flash, Ruffle, or the original server.** Original `.asp` URL suffixes are retained as routes handled by Astro/TypeScript.

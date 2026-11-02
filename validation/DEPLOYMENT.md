@@ -13,4 +13,18 @@ Provisioned resources:
 
 The public repository uses a clean application snapshot without local browser history, private database seeds/exports, credentials or local storage. The source MDBs are retained locally and are not needed by the deployed runtime.
 
-Production deployment and public URL verification results will be recorded here after deployment.
+Live URL: **https://hongxuan-astro.easondev.workers.dev**
+
+Deployed version: `ca38c585-4929-4487-a1b2-ee3c42d701f7`. Worker startup measured16ms. The five-minute outbox retry schedule is deployed; outbox mode does not send external email.
+
+## Production verification
+
+- All198original ASP candidates audited over HTTPS:22x200,167x303 authentication redirects,6excluded404,3POST-only405; zero unexpected failures.
+- Browser checks for home, catalogue, product619, contact, cart, admin login and archive:200responses, zero broken images and zero uncaught JavaScript errors.
+- Source account login succeeded against production D1.
+- Actual production D1/R2 fixture flow passed: product creation, GIF upload, automatic attachment, image serving, delete confirmation, object deletion and product cleanup. Fixture records/objects were removed.
+- Production contact-draft router regression passed, confirming session-bound form recovery after invalid input.
+- Original business totals remain379products,54enquiries and115enquiry lines after fixture cleanup. Successful validation logins add normal audit log records; product autoincrement values may advance after temporary fixtures.
+- Production build and Astro check passed with0errors/0warnings before publishing. The preceding complete local suite passed65/65.
+
+The site uses the Workers-provided hostname. No custom domain/DNS or automatic GitHub deployment workflow was configured. Future code updates require the documented build/deploy commands. Missing source membership data/video and editor differences remain as documented in the migration validation report. Real email delivery remains unconfigured.
