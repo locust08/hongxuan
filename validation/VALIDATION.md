@@ -4,6 +4,8 @@ The Astro application runs locally at http://127.0.0.1:4321. Production output w
 
 **Deployment follow-up:** the application has since been pushed to GitHub and deployed on Cloudflare Workers. See [DEPLOYMENT.md](DEPLOYMENT.md) for the public URL, production D1 reconciliation and live verification. The evidence below records the earlier migration acceptance checks.
 
+**Clean URL follow-up,3November2026:** all migrated business endpoints now use extensionless Astro URLs, with permanent redirects from old addresses. The expanded73-test suite and production checks pass; see [CLEAN-URLS.md](CLEAN-URLS.md).
+
 ## Verified results
 
 | Check | Result |

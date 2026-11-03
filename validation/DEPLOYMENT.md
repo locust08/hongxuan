@@ -1,5 +1,7 @@
 # Cloudflare deployment — 2 November 2026
 
+**3November2026 update:** clean Astro URLs are deployed in version `4472013a-285d-43a0-a0df-2cb113f703e6`. The five requested pages and admin/forms no longer use `.asp` addresses. See [CLEAN-URLS.md](CLEAN-URLS.md) for production routing/browser/POST/upload verification; the original deployment evidence below remains historical.
+
 Repository: https://github.com/locust08/hongxuan
 
 Account: **Eason CF Main**. Worker: `hongxuan-astro`.
