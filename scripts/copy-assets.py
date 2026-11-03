@@ -53,6 +53,8 @@ html = archive.read_text(encoding='utf-8', errors='replace')
 replacement = '<canvas id="archive-intro" width="757" height="236" role="img" aria-label="Hong Xuan automotive products"></canvas><script src="/archive-intro/animation.js" defer></script>'
 html = re.sub(r'<object\b.*?</object>', replacement, html, flags=re.I | re.S)
 archive.write_text(html, encoding='utf-8')
+footer = public / 'bottom.html'
+footer.write_text(footer.read_text(encoding='utf-8').replace('href="terms.asp"', 'href="/terms"'), encoding='utf-8')
 # The supplied archive references these absent, explicitly 1x1 spacer GIFs.
 # Reconstruct transparent pixels without changing the archived table geometry.
 for name in ['backup/images/000none.gif', 'backup/picture/000none.gif']:

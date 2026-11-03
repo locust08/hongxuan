@@ -78,6 +78,11 @@ test('legacy checkout action updates quantities even when the enquiry fields are
  assert.equal(response.headers.get('location'),'/cart_summary.asp');assert.equal(sqlite.prepare('SELECT prod_qty FROM order_products_tmp').get()!.prod_qty,3);
 });
 
+test('clean cart endpoints retain clean product return URLs and category context',async()=>{
+ const {browser}=fixture();const a=browser();const initial=await a('/');
+ const response=await handleCore(await a('/add_cart_action',{_csrf:initial.session.csrf,prod_id:'1',redirect:'/details?prod_id=1&catid=A&page=3'})) as Response;
+ const destination=new URL(response.headers.get('location')!,'https://example.test');assert.equal(destination.pathname,'/details');assert.equal(destination.searchParams.get('catid'),'A');assert.equal(destination.searchParams.get('page'),'3');
+});
 test('cart redirects retain actual original product URLs and reject external destinations',async()=>{
  const {browser}=fixture();const a=browser();const initial=await a('/');
  for(const dest of ['details.asp','our-products.asp','our-brands.asp','new-arrival.asp']){
@@ -134,23 +139,23 @@ test('live HTTP: isolated carts, simultaneous enquiries, retry idempotency and o
  const baseline=sql("SELECT (SELECT count(*) FROM orders) orders,(SELECT count(*) FROM order_products) lines,(SELECT count(*) FROM order_products_tmp) carts,(SELECT count(*) FROM app_outbox) outbox,(SELECT seq FROM counter WHERE type='ORDER') seq,(SELECT prod_id FROM products ORDER BY prod_id LIMIT 1) product")[0];
  function client(){let cookie='';return async(path:string,fields?:Record<string,string>)=>{const res=await fetch(base+path,{redirect:'manual',headers:{...(cookie?{Cookie:cookie}:{}),...(fields?{Origin:base}:{})},...(fields?{method:'POST',body:new URLSearchParams(fields)}:{})});for(const c of res.headers.getSetCookie()){if(c.startsWith('hx_session=')){cookie=c.split(';')[0];const id=cookie.slice('hx_session='.length);if(!sessions.includes(id))sessions.push(id);}}const text=await res.text();assert.ok(res.status<500,'live Worker responded without a server error');return {res,text};};}
  const csrfOf=(html:string)=>{const value=/name="_csrf"[^>]*value="([^"]+)"/.exec(html)?.[1];assert.ok(value,'rendered form includes CSRF');return value;};
- const captchaOf=async(c:ReturnType<typeof client>)=>{const {text}=await c('/aspcaptcha.asp');const value=/<text\b[^>]*>(\d+)<\/text>/.exec(text)?.[1];assert.ok(value,'captcha SVG includes a test-readable challenge');return value;};
+ const captchaOf=async(c:ReturnType<typeof client>)=>{const {text}=await c('/aspcaptcha');const value=/<text\b[^>]*>(\d+)<\/text>/.exec(text)?.[1];assert.ok(value,'captcha SVG includes a test-readable challenge');return value;};
  let completed=false;
  try{
-  const a=client(),b=client();const initialA=await a('/contactus.asp'),initialB=await b('/contactus.asp');const csrfA=csrfOf(initialA.text),csrfB=csrfOf(initialB.text);const product=String(baseline.product);
-  const added=await a('/add_cart_action.asp',{_csrf:csrfA,prod_id:product,redirect:'/details.asp?prod_id='+product+'&catid=TEST&page=2'});const destination=new URL(added.res.headers.get('location')!,base);assert.equal(destination.pathname,'/details.asp');assert.equal(destination.searchParams.get('prod_id'),product);assert.equal(destination.searchParams.get('page'),'2');
-  assert.ok((await a('/cart_summary.asp')).text.includes('name="qty_'+product+'"'));assert.equal((await b('/cart_summary.asp')).text.includes('name="qty_'+product+'"'),false,'other browser cannot see cart');
-  const forbidden=await b('/add_cart_action.asp',{_csrf:csrfA,prod_id:product,tmp_id:sessions[0]});assert.ok(forbidden.res.headers.get('location')?.includes('error=csrf'));
-  await b('/add_cart_action.asp',{_csrf:csrfB,prod_id:product});
+  const a=client(),b=client();const initialA=await a('/contactus'),initialB=await b('/contactus');const csrfA=csrfOf(initialA.text),csrfB=csrfOf(initialB.text);const product=String(baseline.product);
+  const added=await a('/add_cart_action',{_csrf:csrfA,prod_id:product,redirect:'/details?prod_id='+product+'&catid=TEST&page=2'});const destination=new URL(added.res.headers.get('location')!,base);assert.equal(destination.pathname,'/details');assert.equal(destination.searchParams.get('prod_id'),product);assert.equal(destination.searchParams.get('page'),'2');
+  assert.ok((await a('/cart_summary')).text.includes('name="qty_'+product+'"'));assert.equal((await b('/cart_summary')).text.includes('name="qty_'+product+'"'),false,'other browser cannot see cart');
+  const forbidden=await b('/add_cart_action',{_csrf:csrfA,prod_id:product,tmp_id:sessions[0]});assert.ok(forbidden.res.headers.get('location')?.includes('error=csrf'));
+  await b('/add_cart_action',{_csrf:csrfB,prod_id:product});
   const fieldsA={_csrf:csrfA,contactname:marker,contactno:'123456',email:'migration-validation@example.invalid',add:'Disposable validation address',remarks:'Synthetic HTTP integration test',strCAPTCHA:await captchaOf(a)};
   const fieldsB={...fieldsA,_csrf:csrfB,strCAPTCHA:await captchaOf(b)};
-  const result=await Promise.all([a('/cartsum.asp',fieldsA),b('/cartsum.asp',fieldsB)]);const orders=result.map(r=>new URL(r.res.headers.get('location')!,base).searchParams.get('order'));assert.ok(orders.every(Boolean),'both simultaneous submissions created an order');assert.notEqual(orders[0],orders[1]);
-  const retry=await a('/cartsum.asp',fieldsA);assert.equal(new URL(retry.res.headers.get('location')!,base).searchParams.get('order'),orders[0]);
-  const contact=await a('/contactus.asp',{_csrf:csrfA,contactname:marker,contactno:'123456',email:'migration-validation@example.invalid',remarks:'Contact with optional address omitted',strCAPTCHA:await captchaOf(a)});assert.ok(contact.res.headers.get('location')?.includes('submitted=1'));
+  const result=await Promise.all([a('/cartsum',fieldsA),b('/cartsum',fieldsB)]);const orders=result.map(r=>new URL(r.res.headers.get('location')!,base).searchParams.get('order'));assert.ok(orders.every(Boolean),'both simultaneous submissions created an order');assert.notEqual(orders[0],orders[1]);
+  const retry=await a('/cartsum',fieldsA);assert.equal(new URL(retry.res.headers.get('location')!,base).searchParams.get('order'),orders[0]);
+  const contact=await a('/contactus',{_csrf:csrfA,contactname:marker,contactno:'123456',email:'migration-validation@example.invalid',remarks:'Contact with optional address omitted',strCAPTCHA:await captchaOf(a)});assert.ok(contact.res.headers.get('location')?.includes('submitted=1'));
   // Race another tab's quantity edit against submission, accepting only a consistent snapshot or an explicit retry.
-  await a('/add_cart_action.asp',{_csrf:csrfA,prod_id:product});
+  await a('/add_cart_action',{_csrf:csrfA,prod_id:product});
   const raceFields={...fieldsA,strCAPTCHA:await captchaOf(a)};
-  const [quantityEdit,raced]=await Promise.all([a('/checkout_action.asp',{_csrf:csrfA,['qty_'+product]:'4'}),a('/cartsum.asp',raceFields)]);
+  const [quantityEdit,raced]=await Promise.all([a('/checkout_action',{_csrf:csrfA,['qty_'+product]:'4'}),a('/cartsum',raceFields)]);
   const raceLocation=new URL(raced.res.headers.get('location')!,base);const raceOrder=raceLocation.searchParams.get('order');
   if(raceOrder){
    const snapshot=sql(`SELECT p.prod_qty quantity,json_extract(o.payload,'$.items[0].prod_qty') mail_quantity FROM order_products p JOIN app_outbox o ON o.order_id=p.order_id AND o.kind='enquiry' WHERE p.order_id=${quote(raceOrder)}`)[0];assert.equal(snapshot.quantity,snapshot.mail_quantity,'committed order and mail use identical quantities');

@@ -1,12 +1,14 @@
 # Hong Xuan — Astro migration
 
-**Live website:** https://hongxuan-astro.easondev.workers.dev  
-**Admin:** https://hongxuan-astro.easondev.workers.dev/app/admin/login.asp  
+**Live website:** https://hongxuan-astro.easondev.workers.dev
+
+**Admin:** https://hongxuan-astro.easondev.workers.dev/app/admin/login
+
 **Repository:** https://github.com/locust08/hongxuan
 
 The migrated application uses Astro 7.4.4, the Cloudflare adapter 14.4.3, TypeScript 6.0.3, Workers, D1 and R2. TypeScript 6 is used because the current Astro checker supports TypeScript 5/6. Package versions are locked in `package-lock.json`.
 
-The original website remains in the parent folder for comparison. **Running this application does not require IIS, Classic ASP, Microsoft Access, Java, FFDec, Flash, Ruffle, or the original server.** Original `.asp` URL suffixes are retained as routes handled by Astro/TypeScript.
+The original website remains in the parent folder for comparison. **Running this application does not require IIS, Classic ASP, Microsoft Access, Java, FFDec, Flash, Ruffle, or the original server.** Pages and form actions use clean URLs such as `/aboutus`, `/our-products` and `/contactus`. Audited old `.asp` addresses return permanent308 redirects to their clean counterparts; no ASP files execute. Original route identifiers remain inside TypeScript services only for source traceability.
 
 ## Local setup
 
@@ -18,7 +20,7 @@ npm run setup
 npm run dev
 ```
 
-Open http://127.0.0.1:4321. The admin login is http://127.0.0.1:4321/app/admin/login.asp. Existing account credentials are retained through an offline conversion to salted PBKDF2 hashes; credentials are not printed in these instructions.
+Open http://127.0.0.1:4321. The admin login is http://127.0.0.1:4321/app/admin/login. Existing account credentials are retained through an offline conversion to salted PBKDF2 hashes; credentials are not printed in these instructions.
 
 On Windows, `./start-local.ps1` starts a hidden server, checks for an existing listener and preserves logs under `.local/`. The source comparison site at localhost:8080 is separate and is not required by Astro.
 

@@ -1,6 +1,7 @@
 import type { AstroCookies } from 'astro';
 import type { RequestContext, Row, Value, Session, PageResult } from './contracts.ts';
 import { escapeHtml, redirect } from './html.ts';
+import { legacyRoutePath } from './urls.ts';
 import { deliverQueuedMail, deliverOrderMail } from './core/mail.ts';
 export { queueMail, deliverQueuedMail, drainOutbox } from './core/mail.ts';
 export type { MailContext } from './core/mail.ts';
@@ -19,7 +20,7 @@ export async function createContext(input:{request:Request,url:URL,cookies:Astro
   if(length>12*1024*1024)throw new Error('Request body too large');
   if(/^(application\/x-www-form-urlencoded|multipart\/form-data)/i.test(request.headers.get('content-type')||''))form=await request.formData();
  }
- const ctx:RequestContext={request,url,path:decodeURIComponent(url.pathname).toLowerCase(),form,params:new URLSearchParams(url.searchParams),db:env.DB,bucket:env.UPLOADS,env,cookies,session};
+ const ctx:RequestContext={request,url,path:legacyRoutePath(url.pathname),form,params:new URLSearchParams(url.searchParams),db:env.DB,bucket:env.UPLOADS,env,cookies,session};
  if(url.searchParams.has('error')){
   const draft=await first(ctx,'SELECT fields FROM app_form_drafts WHERE session_id=? AND form_kind=? AND expires>?',[session.id,formKind(ctx),Date.now()]);
   if(draft){const fields:Record<string,string>=JSON.parse(String(draft.fields));for(const [key,value] of Object.entries(fields))if(!ctx.params.has(key))ctx.params.set(key,value);}
@@ -101,7 +102,7 @@ function cartDestination(ctx:RequestContext,id:number):string{
  let destination=fallback;
  const input=field(ctx,'redirect',2000);
  if(input&&!/^[a-z][a-z\d+.-]*:/i.test(input)&&!input.startsWith('//')&&!/[\\\r\n]/.test(input)){
-  try{const candidate=new URL(input,ctx.url);if(candidate.origin===ctx.url.origin&&/^\/(?:details|our-products|our-brands|new-arrival|our-category|products|products_details|product_details|latest|category|brand|index|cart_summary)\.asp$/i.test(candidate.pathname))destination=candidate;}catch{}
+  try{const candidate=new URL(input,ctx.url);if(candidate.origin===ctx.url.origin&&/^\/(?:details|our-products|our-brands|new-arrival|our-category|products|products_details|product_details|latest|category|brand|index|cart_summary)\.asp$/i.test(legacyRoutePath(candidate.pathname)))destination=candidate;}catch{}
  }
  const allowed=['id','prod_id','brand','brandid','catid','subcatid','model','keyword','pricerange','page','pagenum','search'];
  const params=new URLSearchParams();for(const key of allowed){const value=ctx.form.has(key)?field(ctx,key,500):destination.searchParams.get(key);if(value!==null)params.set(key,value.slice(0,500));}

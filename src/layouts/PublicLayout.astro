@@ -19,6 +19,7 @@ const categories=catalogue?await categoryStrip(ctx):'';
 <meta name="description" content={page.description||''} />
 <meta name="keywords" content={page.keywords||''} />
 <meta name="robots" content="index, follow" />
+<link rel="canonical" href={new URL(Astro.url.pathname+Astro.url.search,Astro.url.origin).href} />
 <link rel="stylesheet" href="/a.css" />
 <style is:inline>
 body { margin:0; background-color:#ffff41; background-image:url('/images/bg_01.jpg'); background-repeat:repeat-x; background-position:top; }

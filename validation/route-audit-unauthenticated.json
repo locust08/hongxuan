@@ -1,6 +1,8 @@
 [
   {
     "source": "211212contactus.asp",
+    "legacyStatus": 308,
+    "canonical": "/211212contactus",
     "status": 200,
     "redirect": null,
     "applicationError": false,
@@ -8,6 +10,8 @@
   },
   {
     "source": "aboutus_old.asp",
+    "legacyStatus": 308,
+    "canonical": "/aboutus_old",
     "status": 200,
     "redirect": null,
     "applicationError": false,
@@ -15,6 +19,8 @@
   },
   {
     "source": "aboutus.asp",
+    "legacyStatus": 308,
+    "canonical": "/aboutus",
     "status": 200,
     "redirect": null,
     "applicationError": false,
@@ -22,6 +28,8 @@
   },
   {
     "source": "add_cart_action.asp",
+    "legacyStatus": 308,
+    "canonical": "/add_cart_action",
     "status": 405,
     "redirect": null,
     "applicationError": false,
@@ -29,83 +37,107 @@
   },
   {
     "source": "app/admin/field/assign_field_action.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/field/assign_field_action",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/admin/field/assign_field.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/field/assign_field",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/admin/group/all_groups.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/group/all_groups",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/admin/group/assign_profile_action.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/group/assign_profile_action",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/admin/group/assign_profile.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/group/assign_profile",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/admin/group/create_group_action.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/group/create_group_action",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/admin/group/create_group.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/group/create_group",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/admin/group/group_form.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/group/group_form",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/admin/group/modify_group_action.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/group/modify_group_action",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/admin/group/modify_group.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/group/modify_group",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/admin/index.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/index",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/admin/login_action.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/login_action",
     "status": 405,
     "redirect": null,
     "applicationError": false,
@@ -113,6 +145,8 @@
   },
   {
     "source": "app/admin/login.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/login",
     "status": 200,
     "redirect": null,
     "applicationError": false,
@@ -120,573 +154,737 @@
   },
   {
     "source": "app/admin/logout.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/logout",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/admin/module/all_modules.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/module/all_modules",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/admin/module/create_module_action.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/module/create_module_action",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/admin/module/create_module.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/module/create_module",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/admin/module/delete_module_action.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/module/delete_module_action",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/admin/module/delete_module.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/module/delete_module",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/admin/module/modify_module_action.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/module/modify_module_action",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/admin/module/modify_module.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/module/modify_module",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/admin/module/module_form.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/module/module_form",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/admin/module/view_order.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/module/view_order",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/admin/submodule/all_submodules.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/submodule/all_submodules",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/admin/submodule/create_submodule_action.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/submodule/create_submodule_action",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/admin/submodule/create_submodule.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/submodule/create_submodule",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/admin/submodule/delete_submodule_action.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/submodule/delete_submodule_action",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/admin/submodule/modify_submodule_action.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/submodule/modify_submodule_action",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/admin/submodule/modify_submodule.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/submodule/modify_submodule",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/admin/submodule/submodule_form.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/submodule/submodule_form",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/admin/submodule/view_order.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/submodule/view_order",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/admin/user/all_log.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/user/all_log",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/admin/user/all_users.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/user/all_users",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/admin/user/create_user_action.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/user/create_user_action",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/admin/user/create_user.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/user/create_user",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/admin/user/modify_user_action.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/user/modify_user_action",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/admin/user/modify_user.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/user/modify_user",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/admin/user/purge_log.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/user/purge_log",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/admin/user/reset_pwd.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/user/reset_pwd",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/admin/user/resetPwd_action.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/user/resetpwd_action",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/admin/user/user_form.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/user/user_form",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/admin/user/view_log.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/admin/user/view_log",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/all_catalog.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/all_catalog",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/catalog_form.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/catalog_form",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/change_action.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/change_action",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/Copy of modify_catalog_action.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/copy%20of%20modify_catalog_action",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/create_catalog_action.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/create_catalog_action",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/create_catalog_action1.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/create_catalog_action1",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/create_catalog_action2.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/create_catalog_action2",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/create_catalog_action3.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/create_catalog_action3",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/create_catalog_action4.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/create_catalog_action4",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/create_catalog_action5.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/create_catalog_action5",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/create_catalog.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/create_catalog",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/delete_catalog_action.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/delete_catalog_action",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/delete_catalog.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/delete_catalog",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/display.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/display",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/modify_catalog_action.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/modify_catalog_action",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/modify_catalog_action1.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/modify_catalog_action1",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/modify_catalog_action2.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/modify_catalog_action2",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/modify_catalog_action3.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/modify_catalog_action3",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/modify_catalog_action4.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/modify_catalog_action4",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/modify_catalog_action5.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/modify_catalog_action5",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/modify_catalog.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/modify_catalog",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/upload_arc.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/upload_arc",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/upload_arc1.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/upload_arc1",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/upload_arc2.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/upload_arc2",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/upload_arc3.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/upload_arc3",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/upload_arc4.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/upload_arc4",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/uploadc/config.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/uploadc/config",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/uploadc/upload.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/uploadc/upload",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/uploadc/uploadfile.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/uploadc/uploadfile",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/uploadc/uploadform.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/uploadc/uploadform",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/uploadc1/config.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/uploadc1/config",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/uploadc1/upload.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/uploadc1/upload",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/uploadc1/uploadfile.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/uploadc1/uploadfile",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/uploadc1/uploadform.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/uploadc1/uploadform",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/uploadc2/config.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/uploadc2/config",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/uploadc2/upload.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/uploadc2/upload",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/uploadc2/uploadfile.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/uploadc2/uploadfile",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/uploadc2/uploadform.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/uploadc2/uploadform",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/uploadc3/config.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/uploadc3/config",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/uploadc3/upload.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/uploadc3/upload",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/uploadc3/uploadfile.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/uploadc3/uploadfile",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/uploadc3/uploadform.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/uploadc3/uploadform",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/uploadc4/config.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/uploadc4/config",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/uploadc4/upload.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/uploadc4/upload",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/uploadc4/uploadfile.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/uploadc4/uploadfile",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/uploadc4/uploadform.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/uploadc4/uploadform",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/view_catalog.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/view_catalog",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/view_logo.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/view_logo",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/view_picture.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/view_picture",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/view_picture1.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/view_picture1",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/catalog/view_picture2.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/catalog/view_picture2",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/index.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/index",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/login_action.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/login_action",
     "status": 405,
     "redirect": null,
     "applicationError": false,
@@ -694,6 +892,8 @@
   },
   {
     "source": "app/module/login.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/login",
     "status": 200,
     "redirect": null,
     "applicationError": false,
@@ -701,496 +901,638 @@
   },
   {
     "source": "app/module/logout.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/logout",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/all_brand.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/all_brand",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/all_cat.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/all_cat",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/all_status.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/all_status",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/all_subcat.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/all_subcat",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/brand_form_old.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/brand_form_old",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/brand_form.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/brand_form",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/cat_form.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/cat_form",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/create_brand_action_old.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/create_brand_action_old",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/create_brand_action.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/create_brand_action",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/create_brand_action1_old.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/create_brand_action1_old",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/create_brand_action1.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/create_brand_action1",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/create_brand.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/create_brand",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/create_cat_action.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/create_cat_action",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/create_cat.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/create_cat",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/create_status_action.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/create_status_action",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/create_status_action1.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/create_status_action1",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/create_status.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/create_status",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/create_subcat_action.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/create_subcat_action",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/create_subcat.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/create_subcat",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/delete_brand_action.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/delete_brand_action",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/delete_cat_action.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/delete_cat_action",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/delete_status_action.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/delete_status_action",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/delete_subcat_action.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/delete_subcat_action",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/heading_form.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/heading_form",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/modify_brand_action.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/modify_brand_action",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/modify_brand_action1.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/modify_brand_action1",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/modify_brand.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/modify_brand",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/modify_cat_action.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/modify_cat_action",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/modify_cat.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/modify_cat",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/modify_heading_action.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/modify_heading_action",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/modify_heading.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/modify_heading",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/modify_status_action.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/modify_status_action",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/modify_status_action1.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/modify_status_action1",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/modify_status.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/modify_status",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/modify_subcat_action.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/modify_subcat_action",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/modify_subcat.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/modify_subcat",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/status_form.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/status_form",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/subcat_form.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/subcat_form",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/upload_ar1.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/upload_ar1",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/upload_ar2.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/upload_ar2",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/upload1/config.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/upload1/config",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/upload1/upload.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/upload1/upload",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/upload1/uploadfile.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/upload1/uploadfile",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/upload1/uploadform.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/upload1/uploadform",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/upload2/config.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/upload2/config",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/upload2/upload.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/upload2/upload",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/upload2/uploadfile.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/upload2/uploadfile",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/upload2/uploadform.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/upload2/uploadform",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/view_picture.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/view_picture",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/maintenance/view_picture1.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/maintenance/view_picture1",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/members/all_online_clients.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/members/all_online_clients",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/members/client_form.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/members/client_form",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/members/delete_online_client_action.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/members/delete_online_client_action",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/members/delete_online_client.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/members/delete_online_client",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/members/modify_client_action.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/members/modify_client_action",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/members/modify_client.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/members/modify_client",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/members/reset_pwd.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/members/reset_pwd",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/members/resetPwd_action.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/members/resetpwd_action",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/members/verify_online_client_action.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/members/verify_online_client_action",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/members/verify_online_client.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/members/verify_online_client",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/members/view_online_client.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/members/view_online_client",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/webstore/all_orders.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/webstore/all_orders",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/webstore/list_all_labels.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/webstore/list_all_labels",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/webstore/order_form.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/webstore/order_form",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/webstore/print_enquiry.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/webstore/print_enquiry",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/webstore/printable_format.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/webstore/printable_format",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/webstore/update_order_action.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/webstore/update_order_action",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/webstore/update_order.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/webstore/update_order",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/module/webstore/view_order.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/module/webstore/view_order",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/NieLq77.asp",
+    "legacyStatus": 404,
+    "canonical": null,
     "status": 404,
     "redirect": null,
     "applicationError": false,
@@ -1198,41 +1540,53 @@
   },
   {
     "source": "app/personal/change_pwd.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/personal/change_pwd",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/personal/changePwd_action.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/personal/changepwd_action",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/personal/modify_data_action.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/personal/modify_data_action",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/personal/modify_data.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/personal/modify_data",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/personal/personal_user_form.asp",
+    "legacyStatus": 308,
+    "canonical": "/app/personal/personal_user_form",
     "status": 303,
-    "redirect": "/app/admin/login.asp",
+    "redirect": "/app/admin/login",
     "applicationError": false,
     "classification": "unauthenticated-admin"
   },
   {
     "source": "app/ZmaPiga.asp",
+    "legacyStatus": 404,
+    "canonical": null,
     "status": 404,
     "redirect": null,
     "applicationError": false,
@@ -1240,6 +1594,8 @@
   },
   {
     "source": "aspcaptcha.asp",
+    "legacyStatus": 308,
+    "canonical": "/aspcaptcha",
     "status": 200,
     "redirect": null,
     "applicationError": false,
@@ -1247,6 +1603,8 @@
   },
   {
     "source": "cart_summary.asp",
+    "legacyStatus": 308,
+    "canonical": "/cart_summary",
     "status": 200,
     "redirect": null,
     "applicationError": false,
@@ -1254,6 +1612,8 @@
   },
   {
     "source": "cartsum.asp",
+    "legacyStatus": 308,
+    "canonical": "/cartsum",
     "status": 200,
     "redirect": null,
     "applicationError": false,
@@ -1261,6 +1621,8 @@
   },
   {
     "source": "contactus.asp",
+    "legacyStatus": 308,
+    "canonical": "/contactus",
     "status": 200,
     "redirect": null,
     "applicationError": false,
@@ -1268,6 +1630,8 @@
   },
   {
     "source": "details.asp",
+    "legacyStatus": 308,
+    "canonical": "/details?prod_id=619",
     "status": 200,
     "redirect": null,
     "applicationError": false,
@@ -1275,6 +1639,8 @@
   },
   {
     "source": "index.asp",
+    "legacyStatus": 308,
+    "canonical": "/",
     "status": 200,
     "redirect": null,
     "applicationError": false,
@@ -1282,6 +1648,8 @@
   },
   {
     "source": "mouseout.asp",
+    "legacyStatus": 308,
+    "canonical": "/mouseout",
     "status": 200,
     "redirect": null,
     "applicationError": false,
@@ -1289,6 +1657,8 @@
   },
   {
     "source": "new-arrival.asp",
+    "legacyStatus": 308,
+    "canonical": "/new-arrival",
     "status": 200,
     "redirect": null,
     "applicationError": false,
@@ -1296,6 +1666,8 @@
   },
   {
     "source": "others.asp",
+    "legacyStatus": 308,
+    "canonical": "/others",
     "status": 200,
     "redirect": null,
     "applicationError": false,
@@ -1303,6 +1675,8 @@
   },
   {
     "source": "our-brands.asp",
+    "legacyStatus": 308,
+    "canonical": "/our-brands",
     "status": 200,
     "redirect": null,
     "applicationError": false,
@@ -1310,6 +1684,8 @@
   },
   {
     "source": "our-brands1.asp",
+    "legacyStatus": 308,
+    "canonical": "/our-brands1",
     "status": 200,
     "redirect": null,
     "applicationError": false,
@@ -1317,6 +1693,8 @@
   },
   {
     "source": "our-category.asp",
+    "legacyStatus": 308,
+    "canonical": "/our-category",
     "status": 200,
     "redirect": null,
     "applicationError": false,
@@ -1324,6 +1702,8 @@
   },
   {
     "source": "our-products.asp",
+    "legacyStatus": 308,
+    "canonical": "/our-products",
     "status": 200,
     "redirect": null,
     "applicationError": false,
@@ -1331,6 +1711,8 @@
   },
   {
     "source": "right.asp",
+    "legacyStatus": 308,
+    "canonical": "/right",
     "status": 200,
     "redirect": null,
     "applicationError": false,
@@ -1338,6 +1720,8 @@
   },
   {
     "source": "right2.asp",
+    "legacyStatus": 308,
+    "canonical": "/right2",
     "status": 200,
     "redirect": null,
     "applicationError": false,
@@ -1345,6 +1729,8 @@
   },
   {
     "source": "terms.asp",
+    "legacyStatus": 308,
+    "canonical": "/terms",
     "status": 200,
     "redirect": null,
     "applicationError": false,
@@ -1352,6 +1738,8 @@
   },
   {
     "source": "test/asp/test_mail.asp",
+    "legacyStatus": 404,
+    "canonical": null,
     "status": 404,
     "redirect": null,
     "applicationError": false,
@@ -1359,6 +1747,8 @@
   },
   {
     "source": "test/asp/test_msaccess.asp",
+    "legacyStatus": 404,
+    "canonical": null,
     "status": 404,
     "redirect": null,
     "applicationError": false,
@@ -1366,6 +1756,8 @@
   },
   {
     "source": "test/asp/test_mssql.asp",
+    "legacyStatus": 404,
+    "canonical": null,
     "status": 404,
     "redirect": null,
     "applicationError": false,
@@ -1373,6 +1765,8 @@
   },
   {
     "source": "test/asp/test_mysql.asp",
+    "legacyStatus": 404,
+    "canonical": null,
     "status": 404,
     "redirect": null,
     "applicationError": false,
@@ -1380,6 +1774,8 @@
   },
   {
     "source": "top_category.asp",
+    "legacyStatus": 308,
+    "canonical": "/top_category",
     "status": 200,
     "redirect": null,
     "applicationError": false,

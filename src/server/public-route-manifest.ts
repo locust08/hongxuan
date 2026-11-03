@@ -1,0 +1,1 @@
+export const PUBLIC_ROUTES=['/','/index.asp','/aboutus.asp','/aboutus_old.asp','/terms.asp','/contactus.asp','/211212contactus.asp','/our-products.asp','/new-arrival.asp','/our-brands.asp','/our-brands1.asp','/our-category.asp','/details.asp','/cart_summary.asp','/cartsum.asp','/mouseout.asp','/right.asp','/right2.asp','/top_category.asp','/others.asp'];
