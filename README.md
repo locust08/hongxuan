@@ -36,8 +36,9 @@ Baseline local D1 reconciliation is recorded privately in `private-data/d1-recon
 
 ## Application and routes
 
-- Public pages retain the original content, metadata, image slices, small typography, yellow/orange palette, 1002-pixel table layout, search, categories, product ordering, pagination, details, enquiry cart and contact forms.
-- Smaller screens preserve the original horizontal scrolling instead of introducing a redesigned mobile layout.
+- Public pages retain the original content, metadata, image artwork and yellow/orange palette. The desktop shell is capped at1002px; smaller screens use readable text, wrapping navigation/search, fluid product grids, stacked forms and sidebars without page-level horizontal scrolling.
+- About Us includes all seven supplied product photographs, labelled and linked to their full-size originals. The gallery uses a wide lead photo, two desktop columns and one phone column.
+- Admin navigation, forms and the rich-text editor reflow on smaller screens. Wide record/permission tables scroll within keyboard-focusable regions. Historical HTML pages and map views include viewport-aware styling.
 - The back office includes accounts, permissions, personal settings, catalogue/maintenance operations, uploads, enquiry processing and printing. All legacy source routes have an explicit coverage treatment. Alternate arbitrary paths must not dispatch privileged operations by filename alone.
 - D1 stores sessions, CSRF/captcha state and the durable mail outbox. R2 supports editable images/documents using their original public asset paths. Original static images remain bundled assets, with case aliases for Windows filename differences.
 - The main header and archive intro use native HTML5 Canvas drawing commands and original recovered artwork. No SWF or emulator is loaded. See `THIRD_PARTY.md` for conversion attribution and animation details.
@@ -104,3 +105,5 @@ Do not reimport the initial seed into an existing populated production database.
 - Random recommended products and current date/time naturally differ between captures. Visual checks stabilize these where possible. See the validation documents for measured page differences and unresolved items; do not infer full parity from a successful build alone.
 
 Final local test, build, route, browser and deployment-bundle evidence is recorded in [validation/VALIDATION.md](validation/VALIDATION.md).
+
+The5November2026gallery/responsive update and its screen-size audit are documented in [validation/RESPONSIVE.md](validation/RESPONSIVE.md).

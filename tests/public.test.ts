@@ -20,6 +20,14 @@ test('search text is escaped and zero results retain empty state',async()=>{cons
 test('contact variants retain legacy names and safe values',async()=>{for(const route of ['/contactus.asp','/211212contactus.asp']){const r=await page(route,{contactname:'" onfocus="alert(1)',error:'captcha'});for(const name of ['contactname','compname','add','state','countrydesc','contactno','faxno','email','remarks','strCAPTCHA','_csrf'])assert.ok(r.html.includes('name="'+name+'"'),name);assert.match(r.html,/&quot; onfocus=&quot;/);assert.match(r.html,/Not Verified/);assert.match(r.html,/aspcaptcha.asp/);assert.match(r.html,/type="submit"/);}});
 test('missing product returns 404 and valid detail offers protected enquiry',async()=>{assert.equal((await page('/details.asp',{prod_id:'9999'})).status,404);const r=await page('/details.asp',{prod_id:'1'});assert.match(r.html,/name="prod_id" value="1"/);assert.match(r.html,/name="_csrf"/);assert.match(r.html,/Product 01/);assert.match(r.html,/test-large.jpg/);assert.match(r.html,/img_index03.gif/);});
 test('archive text variants remain distinct and metadata remains empty',async()=>{const current=await page('/aboutus.asp'),old=await page('/aboutus_old.asp');assert.notEqual(current.html,old.html);assert.match(old.html,/Since 1997/);assert.equal(current.description,'');});
+test('About Us retains the company introduction and displays all seven supplied product photos',async()=>{
+ const result=await page('/aboutus.asp');assert.match(result.html,/established in 1990/);
+ assert.match(result.html,/Our product range/);
+ assert.equal((result.html.match(/class="about-product-photo"/g)||[]).length,7);
+ for(const number of ['02','03','04','05','06','07','08'])assert.ok(result.html.includes('/about/products/product-'+number+'.jpeg'));
+ assert.ok(result.html.indexOf('manufacturing plant')<result.html.indexOf('Our product range'));
+ assert.match(result.html,/loading="lazy"/);assert.doesNotMatch(result.html,/alt=""/);
+});
 test('cart preserves empty-state and success/error messages',async()=>{assert.match((await page('/cart_summary.asp')).html,/No item added/);assert.match((await page('/cartsum.asp',{submitted:'1'})).html,/message has been queued/);assert.match((await page('/cart_summary.asp',{error:'captcha'})).html,/Not Verified/);});
 
 test('populated cart retains original quantity and personal forms',async()=>{const r=await page('/cart_summary.asp',{fixtureCart:'1'});for(const name of ['qty_1','contactname','compname2','email','add','contactno','faxno','remarks','strCAPTCHA','_csrf'])assert.ok(r.html.includes('name="'+name+'"'),name);assert.match(r.html,/Personal Details/);assert.match(r.html,/Update Quantity/);assert.match(r.html,/bgcolor="#990000"/);});

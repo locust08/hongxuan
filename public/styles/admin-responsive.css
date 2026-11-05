@@ -1,0 +1,53 @@
+.admin-main,.admin-content{min-width:0}
+.admin-table-scroll{max-width:100%;overflow-x:auto}
+.admin-table-scroll:focus-visible{outline:2px solid #336699;outline-offset:2px}
+@media(max-width:1001px){
+ .admin-site{margin:0!important;font-family:Arial,sans-serif}
+ .admin-shell{width:100%;min-width:0!important;table-layout:fixed;box-sizing:border-box}
+ .admin-shell,.admin-shell>tbody,.admin-shell>tbody>tr,.admin-shell>tbody>tr>td{display:block;width:100%!important;box-sizing:border-box}
+ .admin-shell>tbody>tr>td{min-width:0;overflow-wrap:anywhere}
+ .admin-header{table-layout:fixed;text-align:left}
+ .admin-header,.admin-header>tbody,.admin-header>tbody>tr{display:block;width:100%;box-sizing:border-box}
+ .admin-header>tbody>tr:first-child{display:flex;flex-wrap:wrap;gap:8px;padding:12px}
+ .admin-header>tbody>tr:first-child>td{display:block;width:auto!important;height:auto}
+ .admin-header>tbody>tr:first-child>td:nth-child(2){display:none}
+ .admin-header>tbody>tr:first-child>td:last-child{flex:1 1 240px}
+ .admin-header img{max-width:100%;height:auto}
+ .admin-workspace{display:flex;flex-direction:column;min-width:0}
+ .admin-navigation,.admin-main{display:block;width:auto!important;min-width:0;padding:12px;box-sizing:border-box}
+ .admin-navigation{background:#eeeeff}
+ .admin-menu{width:100%;table-layout:fixed}
+ .admin-menu>tbody{display:flex;flex-wrap:wrap;gap:4px}
+ .admin-menu tr{display:contents}
+ .admin-menu td{display:flex;align-items:center;min-width:0;flex:1 1 140px;padding:0!important}
+ .admin-menu td a{display:block;padding:12px 10px;font-size:13px;min-height:44px;box-sizing:border-box;width:100%}
+ .admin-menu td b{width:100%}
+ .admin-content{max-width:100%;font-size:14px;line-height:1.5}
+ .admin-content .show,.admin-content .label,.admin-content .smallnote{font-size:14px}
+ .admin-content table{max-width:100%;width:100%;table-layout:fixed}
+ .admin-content .admin-table-scroll>table{min-width:640px;max-width:none;table-layout:auto}
+ .admin-content td{overflow-wrap:anywhere}
+ .admin-content td[nowrap]{white-space:normal}
+ .admin-content img{max-width:100%;height:auto}
+ .admin-content form{max-width:100%;margin:0 0 16px}
+ .admin-content input,.admin-content select,.admin-content textarea{max-width:100%;box-sizing:border-box;font-size:16px}
+ .admin-content input:not([type=hidden]):not([type=checkbox]):not([type=radio]):not([type=image]),.admin-content select,.admin-content button{min-height:42px}
+ .admin-content input[type=text],.admin-content input[type=password],.admin-content input[type=email],.admin-content textarea{width:100%}
+ .admin-content textarea{min-height:130px}
+ .admin-content form:not(:has([data-table-scroll]))>table>tbody>tr{display:flex;flex-wrap:wrap}
+ .admin-content form:not(:has([data-table-scroll]))>table>tbody>tr>td{display:block;width:100%!important;height:auto;box-sizing:border-box;padding:4px 0}
+ .admin-content table:has(>tbody>tr>th),.admin-content table[border="1"]{display:block;overflow-x:auto;max-width:100%;table-layout:auto}
+ .admin-content table:has(>tbody>tr>th)>tbody,.admin-content table[border="1"]>tbody{display:table;min-width:640px;width:100%;table-layout:fixed}
+ .admin-content [data-rich-editor]{width:100%!important;box-sizing:border-box}
+ .admin-content [contenteditable]{width:100%!important;box-sizing:border-box;overflow-wrap:anywhere}
+ .admin-content [data-rich-editor] button{min-height:36px;font-size:12px;padding:4px 8px;margin:2px}
+ .admin-content [data-rich-editor] select{width:auto;max-width:100%;margin:2px}
+ .admin-content form[name=loginForm] td{width:100%!important}
+ .admin-content form[name=loginForm] table{max-width:420px;margin:auto}
+ .admin-content form[name=loginForm] input{width:100%;min-height:44px}
+ .admin-content form[name=loginForm] button{min-height:44px;padding:8px!important}
+ .admin-site[data-login=true] .admin-content>table>tbody>tr{display:block}
+ .admin-site[data-login=true] .admin-content>table>tbody>tr>td{display:block;width:auto!important}
+ .admin-site[data-login=true] .admin-content>table>tbody>tr>td:first-child{display:none}
+}
+@media print{.admin-content table{overflow:visible!important}.admin-navigation{display:none}}

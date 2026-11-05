@@ -1,0 +1,8 @@
+{
+  "origin": "http://127.0.0.1:4322",
+  "fullSizePhoto": true,
+  "mobileSearch": true,
+  "editorSync": true,
+  "htmlSource": true,
+  "containedTableScroll": true
+}

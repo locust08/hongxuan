@@ -4,6 +4,7 @@ import json
 import re
 import shutil
 import base64
+import runpy
 
 project = Path(__file__).resolve().parents[1]
 source = project.parent
@@ -61,4 +62,5 @@ for name in ['backup/images/000none.gif', 'backup/picture/000none.gif']:
     spacer = public / name
     spacer.parent.mkdir(parents=True, exist_ok=True)
     spacer.write_bytes(base64.b64decode('R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'))
+runpy.run_path(str(project/'scripts/responsive-archive.py'))
 print(f'Copied {count} assets; recorded {len(aliases)} case aliases; replaced archive Flash object with Canvas.')

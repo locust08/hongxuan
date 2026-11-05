@@ -2,17 +2,21 @@
 import Header from '../components/Header.astro';
 import type { PageResult, RequestContext } from '../server/contracts';
 import { navigation, sidebar, categoryStrip, footer } from '../server/public';
+import { first } from '../server/core';
 interface Props { page:PageResult; ctx:RequestContext }
 const {page,ctx}=Astro.props;
 const catalogue=['/our-products.asp','/new-arrival.asp','/our-brands.asp','/our-brands1.asp','/details.asp'].includes(ctx.path);
 const nav=await navigation(ctx);
 const right=await sidebar(ctx,catalogue);
 const categories=catalogue?await categoryStrip(ctx):'';
+const cartCount=await first(ctx,'SELECT coalesce(sum(prod_qty),0) AS quantity FROM order_products_tmp WHERE tmp_order_id=?',[ctx.session.cartId]);
+const mobileLinks=[['/','Home'],['/aboutus','About Us'],['/our-products','Our Products'],['/new-arrival','New Arrival'],['/contactus','Contact Us']];
 ---
-<Fragment set:html={'<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">'} />
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta http-equiv="Content-Language" content="en-us" />
 {!['/','/index.asp'].includes(ctx.path) && <meta name="revisit-after" content="1 days" />}
 <title>{page.title}</title>
@@ -21,10 +25,10 @@ const categories=catalogue?await categoryStrip(ctx):'';
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href={new URL(Astro.url.pathname+Astro.url.search,Astro.url.origin).href} />
 <link rel="stylesheet" href="/a.css" />
+<link rel="stylesheet" href="/styles/responsive.css" />
 <style is:inline>
 body { margin:0; background-color:#ffff41; background-image:url('/images/bg_01.jpg'); background-repeat:repeat-x; background-position:top; }
 html,body { min-height:100%; }
-body>table { min-width:1002px; }
 
 </style>
 <script is:inline>
@@ -45,15 +49,24 @@ document.addEventListener('submit',function(event){
 });
 </script>
 </head>
-<body>
-<table width="1002" border="0" align="center" cellpadding="0" cellspacing="0" {...{height:"100%"}}>
-<tr {...{height:"191"}}><td valign="top"><Header /></td></tr>
-<tr {...{height:"39"}}><td valign="top" set:html={nav} /></tr>
-<tr {...{height:"100%"}}><td valign="top" {...{background:"/images/bg.jpg"}} style="background-repeat:no-repeat;background-position:top;background-color:#ffff41"><table width="1002" border="0" cellpadding="0" cellspacing="0" class="text">
-{categories&&<tr><td colspan="5" set:html={categories} /></tr>}
-<tr {...{valign:"top"}}><td {...{width:"54"}}><img src="/images/blank.gif" width="54" height="10" alt="" /></td><td {...{width:"620"}} set:html={page.html}/><td {...{width:"45"}}><img src="/images/blank.gif" width="45" height="10" alt="" /></td><td {...{width:"269"}} set:html={right}/><td {...{width:"14"}}><img src="/images/blank.gif" width="14" height="10" alt="" /></td></tr>
-</table></td></tr>
-<tr {...{height:"60"}}><td valign="top" set:html={footer}/></tr>
-</table>
+<body class="public-site">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<div class="site-shell">
+<header><Header /></header>
+<div class="desktop-navigation" set:html={nav} />
+<nav class="mobile-navigation" aria-label="Main navigation">
+{mobileLinks.map(([href,label])=><a href={href} aria-current={Astro.url.pathname===href?'page':undefined}>{label}</a>)}
+<a href="/cart_summary">Enquiry Cart ({Number(cartCount?.quantity||0)})</a>
+</nav>
+<form class="mobile-search" action="/our-products" method="get" role="search"><label for="mobile-keyword">Find a product</label><div><input id="mobile-keyword" name="keyword" type="search" placeholder="Product name or code" value={ctx.params.get('keyword')||''}/><button type="submit">Search</button></div></form>
+<div class="site-body">
+{categories&&<div class="site-categories" set:html={categories} />}
+<div class="page-columns">
+<main id="main-content" class="page-content" data-page={ctx.path.replace(/\.asp$/,'')} set:html={page.html}/>
+<aside class="site-sidebar" aria-label="Product search and brands" set:html={right}/>
+</div>
+</div>
+<footer class="site-footer" set:html={footer}/>
+</div>
 </body>
 </html>

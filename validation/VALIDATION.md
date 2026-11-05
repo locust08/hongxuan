@@ -1,5 +1,7 @@
 # Migration validation — 2 November 2026
 
+**5November2026 responsive update:** the About Us product gallery and fluid public/admin layouts supersede the original fixed-width mobile behavior. See [RESPONSIVE.md](RESPONSIVE.md) for74passing tests,490local page/viewport checks and deployment verification.
+
 The Astro application runs locally at http://127.0.0.1:4321. Production output was also exercised with Astro's Workers preview at port4322. The original source remains outside this application, unchanged.
 
 **Deployment follow-up:** the application has since been pushed to GitHub and deployed on Cloudflare Workers. See [DEPLOYMENT.md](DEPLOYMENT.md) for the public URL, production D1 reconciliation and live verification. The evidence below records the earlier migration acceptance checks.
