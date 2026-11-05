@@ -18,3 +18,12 @@ Use a fluid public shell capped at1002px, preserving the desktop columns. Below 
 6. Run the complete suite with live flags, Astro check, production build and Workers dry run. Fix issues, document exact scope/results, push to the existing main branch and deploy on the already authorized Eason CF Main account. Verify public deployment and leave localhost running.
 
 No source MDB changes, production database migration or data reimport is required.
+
+## Completed evidence
+
+- Seven source JPEGs copied intact; all seven deployed hashes also match.
+-74functional tests pass with live flags; Astro check0errors/0warnings; build and Workers dry run pass.
+-490local page/viewport combinations pass across14widths, including breakpoints;175production checks pass across5representative widths. Both matrices verify a populated cart and cleanup, actual mobile navigation/search and landscape contact layout.
+- Screenshot review corrected half-width admin content, header wrapping, product recommendations and historical table overflow. Browser checks cover gallery enlargement, editor syncing/HTML source and keyboard-focusable table scrolling.
+- Original MDB hash unchanged. Localhost4321remains running. Application pushed as `a4f34ef` and deployed to Eason CF Main, version `c3f6c34c-e350-4c21-a116-3876cc1928a2`.
+- Evidence: `validation/RESPONSIVE.md`, public screenshots and machine-readable local/production reports. Authenticated screenshots/auth state remain private.

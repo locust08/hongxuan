@@ -1,5 +1,7 @@
 # Cloudflare deployment — 2 November 2026
 
+**5November2026 update:** About Us gallery and responsive public/admin layouts are live in version `c3f6c34c-e350-4c21-a116-3876cc1928a2`. Local490-case and production175-case viewport matrices pass; see [RESPONSIVE.md](RESPONSIVE.md). No database import or migration was required.
+
 **3November2026 update:** clean Astro URLs are deployed in version `4472013a-285d-43a0-a0df-2cb113f703e6`. The five requested pages and admin/forms no longer use `.asp` addresses. See [CLEAN-URLS.md](CLEAN-URLS.md) for production routing/browser/POST/upload verification; the original deployment evidence below remains historical.
 
 Repository: https://github.com/locust08/hongxuan
